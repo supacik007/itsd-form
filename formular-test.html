@@ -1,0 +1,230 @@
+<html>
+    <head>
+        <title>VIG IT Service Desk</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+        <link href='custom.css' rel='stylesheet' type='text/css'>
+        <link rel="shortcut icon" type="image/png" href="favicon.ico">
+    </head>
+    <body>
+
+        <div class="container" >
+<div class="card bg-light text-dark">
+
+            <div class="row">
+
+                <div class="col-xl-8 offset-xl-2 py-5">
+                    <a href='https://www.vig.com/en/home.html'><img src="logo_VIG.png" class="rounded float-right"   alt="VIG logo"></a>
+                    <h1> VIG IT Service Desk </h1>
+
+                    <p class="lead">If you have any IT related issue, please submit ticket form .</p>
+                    <!-- We're going to place the form here in the next step -->
+  <form id="contact-form" method="post" action="contact.php" role="form">
+
+      <div class="messages"></div>
+
+      <div class="controls">
+
+          <div class="row">
+
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label for="form_salutation">Salutation *</label>
+                    <select id="form_salutation" name="salutation" class="form-control">
+                        <option value=""></option>
+                        <option value="Mr.">Mr.</option>
+                        <option value="Mrs.">Mrs.</option>
+                    </select>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+
+
+
+              <div class="col-md-5">
+                  <div class="form-group">
+                      <label for="form_name">Firstname *</label>
+                      <input id="form_name" type="text" name="name" class="form-control" placeholder="Enter your firstname *" required="required" data-error="Firstname is required.">
+                      <div class="help-block with-errors"></div>
+                  </div>
+              </div>
+
+              <div class="col-md-5">
+                  <div class="form-group">
+                      <label for="form_lastname">Lastname *</label>
+                      <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Enter your lastname *" required="required" data-error="Lastname is required.">
+                      <div class="help-block with-errors"></div>
+                  </div>
+              </div>
+
+          </div>
+
+          <div class="row">
+              <div class="col-md-5">
+                  <div class="form-group">
+                      <label for="form_email">Email *</label>
+                      <input id="form_email" type="email" name="email" class="form-control" placeholder="Enter your email *" required="required" data-error="Valid email is required.">
+                      <div class="help-block with-errors"></div>
+                  </div>
+              </div>
+
+              <div class="col-md-3">
+                  <div class="form-group">
+                      <label for="form_country">Country *</label>
+                      <select id="form_country" name="country" class="form-control" required="required" data-error="Country is required.">
+                          <option value="" disabled selected>Choose your country</option>
+                          <option value="SK">Slovakia</option>
+                          <option value="CZ">Czech Republic</option>
+                          <option value="AT">Austria</option>
+                      </select>
+                      <div class="help-block with-errors"></div>
+                  </div>
+              </div>
+
+              <div class="col-md-4">
+                  <div class="form-group">
+                      <label for="form_company">Company *</label>
+                      <select id="form_company" name="company" class="form-control" required="required" data-error="Company is required.">
+                          <option value="" disabled selected>Choose your company</option>
+                          <option value="Company[]"></option>
+                      </select>
+                      <div class="help-block with-errors"></div>
+                  </div>
+              </div>
+          </div>
+
+
+
+
+
+
+    <div class="row">
+              <div class="col-md-4">
+                  <div class="form-group">
+                      <label for="form_application">Application *</label>
+                      <select id="form_application" name="application" class="form-control" required="required" data-error="Application is required.">
+                          <option value="" disabled selected>Choose VIG app</option>
+                          <option value="u2">igt.vig.com</option>
+                          <option value="pip">pip.vig.com</option>
+                          <option value="vipp">vipp.vig.com</option>
+                          <option value="citrix">access.vig.com</option>
+                          <option value="Other">Other (specify in message below)</option>
+                      </select>
+                      <div class="help-block with-errors"></div>
+                  </div>
+              </div>
+
+              <div class="col-md-4">
+                  <div class="form-group">
+                      <label for="form_category">Category *</label>
+                      <select id="form_category" name="category" class="form-control" required="required" data-error="Problem´s category is required">
+                          <option value="" disabled selected>Choose category</option>
+                          <option value="password">Password reset</option>
+                          <option value="network">Access problem</option>
+                          <option value="user">User management</option>
+                          <option value="other">Other</option>
+                      </select>
+                      <div class="help-block with-errors"></div>
+                  </div>
+              </div>
+
+
+              <div class="col-md-3">
+                  <div class="form-group">
+                      <label for="form_priority">Priority </label>
+                      <select id="form_priority" name="priority" class="form-control">
+                          <option value="Normal">Normal</option>
+                          <option value="High">High</option>
+                          <option value="Medium">Medium</option>
+                          <option value="Low">Low</option>
+                      </select>
+                      <div class="help-block with-errors"></div>
+                  </div>
+              </div>
+    </div>
+
+
+
+
+
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="form-group">
+                      <label for="form_message">Message *</label>
+                      <textarea id="form_message" name="message" class="form-control" placeholder="Message for VIG IT Support *" rows="8" required="required" data-error="Please leave us detailed information about issue."></textarea>
+                      <div class="help-block with-errors"></div>
+                  </div>
+              </div>
+
+              <div class="col-md-6">
+                  <input type="submit" class="btn btn-success btn-send" value="Send ticket to IT Support">
+              </div>
+
+                  <div class="col-md-6" >
+                      <p class="text-muted  float-right">
+                          <strong>*</strong> These fields are required.
+                      </p>
+                  </div>
+              </div>
+          </div>
+
+
+      </div>
+
+  </form>
+<!--
+  <form method="post" enctype="multipart/form-data">
+         <input type="file" name="files[]" multiple>
+         <input type="submit" value="Upload File" name="submit">
+     </form> -->
+
+                </div>
+</div>
+            </div>
+
+<!--
+            var sel = document.getElementById('CuisineList');
+            for(var i = 0; i < cuisines.length; i++) {
+                var opt = document.createElement('option');
+                opt.innerHTML = cuisines[i];
+                opt.value = cuisines[i];
+                sel.appendChild(opt);
+
+-->
+
+
+        <script>
+
+        function selekcia()
+        {
+
+          var Company;
+          var tmp = document.getElementById("form_country");
+          var country = tmp.options[tmp.selectedIndex].value;
+
+         switch(country) {
+              case "SK":
+                  var Company = ["Komunalna", "Kooperativa"];
+                  break;
+              case "CZ":
+                  var form_company = ["Poistovna CSP", "Kooperativa", "VIG Re", "Ceska podnikatelska poistovna"];
+                  break;
+              case "AT":
+                  var form_company = ["Wiener Staedtische", "Donau Versicherung"];
+                  break;
+              default:
+                  text = "other company";
+          }
+
+        }
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js" integrity="sha256-dHf/YjH1A4tewEsKUSmNnV05DDbfGN3g7NMq86xgGh8=" crossorigin="anonymous"></script>
+        <script src="contact.js"></script>
+<!--        <script src="upload.js"></script> -->
+    </body>
+</html>
